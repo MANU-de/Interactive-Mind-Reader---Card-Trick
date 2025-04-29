@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Mind Reader - Card Trick</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Interactive Mind Reader</h1>
+        <div id="instructions">
+            <p>Think of a card from the ones shown below and remember it. I'll guess your card after a few steps!</p>
+            <button id="startButton">Start Trick</button>
+        </div>
+        <div id="gameArea" style="display: none;">
+            <div id="piles">
+                <div class="pile" id="pile1"><h3>Pile 1</h3></div>
+                <div class="pile" id="pile2"><h3>Pile 2</h3></div>
+                <div class="pile" id="pile3"><h3>Pile 3</h3></div>
+            </div>
+            <div id="controls" style="display: none;">
+                <p>Which pile contains your card?</p>
+                <button onclick="selectPile(1)">Pile 1</button>
+                <button onclick="selectPile(2)">Pile 2</button>
+                <button onclick="selectPile(3)">Pile 3</button>
+            </div>
+            <div id="reveal" style="display: none;">
+                <h2>Your card is:</h2>
+                <div id="revealedCard" class="card"></div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
